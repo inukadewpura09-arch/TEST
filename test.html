@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Test Page</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .container {
+            background: white;
+            width: 400px;
+            margin: auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        }
+
+        button {
+            padding: 10px 20px;
+            background: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Hello, World!</h1>
+        <p>This is a simple HTML test page.</p>
+
+        <input type="text" id="name" placeholder="Enter your name">
+        <br><br>
+
+        <button onclick="showMessage()">Click Me</button>
+
+        <h2 id="result"></h2>
+    </div>
+
+    <script>
+        function showMessage() {
+            let name = document.getElementById("name").value;
+
+            if (name === "") {
+                document.getElementById("result").innerHTML = "Please enter your name!";
+            } else {
+                document.getElementById("result").innerHTML = "Welcome, " + name + "!";
+            }
+        }
+    </script>
+
+</body>
+</html>
